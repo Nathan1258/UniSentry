@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends git build-essential && \
-    pip install --no-cache-dir "git+https://github.com/ubiquiti-community/py-unifi.git" requests schedule && \
+    pip install --no-cache-dir pyunifi requests schedule && \
     apt-get purge -y --auto-remove git build-essential && \
     rm -rf /var/lib/apt/lists/*
 
