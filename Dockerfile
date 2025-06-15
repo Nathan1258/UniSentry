@@ -8,6 +8,6 @@ RUN apt-get update && \
     apt-get purge -y --auto-remove git build-essential && \
     rm -rf /var/lib/apt/lists/*
 
-    COPY update_blocklist.py .
+COPY update_blocklist.py .
 
-    CMD ["python", "update_blocklist.py"]
+CMD ["python", "update_blocklist.py"]
