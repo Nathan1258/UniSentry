@@ -86,7 +86,7 @@ def fetch_blocklist_ips(urls):
     print(">>> Fetching IP addresses from sources...")
     ip_set = set()
     for url in urls:
-        url = url.strip()
+        url = url.strip().strip('\'"')
         if not url: continue
         try:
             print(f"    - Downloading from {url}")
