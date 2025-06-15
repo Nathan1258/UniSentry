@@ -20,17 +20,16 @@ First, we'll create the necessary API Token and Firewall Policies in your UniFi 
 1.  **Docker:** Must be installed on a 24/7 server or NAS that can reach your UniFi Controller.
 2.  **UniFi OS Console:** A UDM, UDM Pro, UDM-SE, UXG-Pro, etc.
 
-#### 1. Create an API Token 🔑
+#### 1. Create an API Key 🔑
 UniSentry authenticates using a dedicated API Token.
 
 1.  Log in to your UniFi Console as the owner or a Super Admin.
-2.  Go to **Settings > System > API Tokens**.
-3.  Click **Add New API Token**.
+2.  Go to **Control Panel > Integrations**.
+3.  Click **Create API Key**.
 4.  Give it a descriptive name (e.g., `UniSentry Token`).
 5.  Set the **Token Expiration** to **Never**.
-6.  Set the **Scope** to **Read/Write**.
-7.  Click **Add**.
-8.  **Important:** Copy the generated token immediately and save it somewhere safe. You will not be able to see it again. This is your `UNIFI_API_TOKEN`.
+6  Click **Add**.
+7  **Important:** Copy the generated token immediately and save it somewhere safe. You will not be able to see it again. This is your `UNIFI_API_TOKEN`.
 
 #### 2. Create Firewall Policies 🚦
 Navigate to **Settings > Policy Engine > Firewall** and create the following two firewall rules.
