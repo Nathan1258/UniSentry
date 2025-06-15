@@ -138,5 +138,5 @@ Contributions are welcome! If you have a suggestion for a new feature, find a bu
 
 ## 🙏 Acknowledgements
 
--   This project relies on the **[pyunifi](https://github.com/finish06/pyunifi)** library to communicate with the UniFi Controller API.
+-   This project relies on the **[Py-unifi](https://github.com/ubiquiti-community/py-unifi/)** library to communicate with the UniFi Controller API.
 -   Threat intelligence data is sourced from reputable providers like **Spamhaus**, **Emerging Threats**, and **abuse.ch**. Please respect their terms of service.
