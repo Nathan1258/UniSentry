@@ -70,14 +70,14 @@ Deploy the container using Docker Compose.
         restart: unless-stopped
         environment:
           # --- UniFi Controller Configuration (REQUIRED) ---
-          - UNIFI_CONTROLLER_URL=[https://192.168.1.1](https://192.168.1.1)
+          - UNIFI_CONTROLLER_URL=https://192.168.1.1
           - UNIFI_API_TOKEN=your_secret_api_token_here
 
           # --- Optional Configuration ---
           - SSL_VERIFY=False # Set to True if your controller has a valid SSL certificate
           - FIREWALL_GROUP_NAME=UniSentry Blocklist
           - UPDATE_SCHEDULE_HOURS=24
-          - BLOCKLIST_URLS="[https://www.spamhaus.org/drop/drop.txt,https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt](https://www.spamhaus.org/drop/drop.txt,https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt)"
+          - BLOCKLIST_URLS="https://www.spamhaus.org/drop/drop.txt,https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt"
           - TZ=Europe/London
     ```
 3.  Start the container:
@@ -92,12 +92,12 @@ If you prefer not to use Docker Compose, run this single command after filling i
 docker run -d \
   --name unisentry \
   --restart unless-stopped \
-  -e UNIFI_CONTROLLER_URL="[https://192.168.1.1](https://192.168.1.1)" \
+  -e UNIFI_CONTROLLER_URL="https://192.168.1.1" \
   -e UNIFI_API_TOKEN="your_secret_api_token_here" \
   -e SSL_VERIFY="False" \
   -e FIREWALL_GROUP_NAME="UniSentry Blocklist" \
   -e UPDATE_SCHEDULE_HOURS="24" \
-  -e BLOCKLIST_URLS="[https://www.spamhaus.org/drop/drop.txt,https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt](https://www.spamhaus.org/drop/drop.txt,https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt)" \
+  -e BLOCKLIST_URLS="https://www.spamhaus.org/drop/drop.txt,https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt" \
   -e TZ="Europe/London" \
   nathan12581/unisentry:latest
 
