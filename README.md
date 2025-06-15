@@ -100,6 +100,7 @@ docker run -d \
   -e BLOCKLIST_URLS="https://www.spamhaus.org/drop/drop.txt,https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt" \
   -e TZ="Europe/London" \
   nathan12581/unisentry:latest
+  ```
 
 ---
 
